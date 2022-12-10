@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
 import Tmdb from "./Tmdb";
-import Header from "./components/Header";
-import FeaturedMovie from "./components/FeaturedMovie";
-import MovieRow from "./components/MovieRow";
-import Footer from "./components/Footer";
+import Header from "./components/Header/Header";
+import FeaturedMovie from "./components/FeaturedMovie/FeaturedMovie";
+import MovieRow from "./components/MovieRow/MovieRow";
+import Footer from "./components/Footer/Footer";
 import "./App.css";
 
 const App = () => {

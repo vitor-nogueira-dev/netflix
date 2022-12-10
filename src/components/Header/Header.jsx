@@ -18,10 +18,14 @@ const Header = ({ black }) => {
         <a href="/">Início</a>
         <a href="/">Séries</a>
         <a href="/">Filmes</a>
+        <a href="/" className="hidden">Bombando</a>
+        <a href="/" className="hidden">Minha Lista</a>
+        <a href="/" className="hidden">Navegar por idioma</a>
+
       </div>
       <div className="header--navRight">
         <a href="/"><SearchIcon /> </a>
-        <a href="/">Infantil</a>
+        <a href="/" className="hidden">Infantil</a>
         <a href="/"><NotificationsOutlinedIcon /></a>
         <div className="header--user">
           <a href="/">

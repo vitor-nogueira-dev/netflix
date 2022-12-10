@@ -2,11 +2,6 @@ const API_KEY = 'fba7d07033ca79d8d5d3719b1dab5060';
 const API_BASE = 'https://api.themoviedb.org/3';
 
 
-// Originais
-// Recomendados (trending)
-// Em alta (top rated)
-// Filmes : Aç˜o, comédia, terror, romance e documentários 
-
 const fetchFilmes = async (endpoint) => {
   const request = await fetch(`${API_BASE}${endpoint}`)
   const json = await request.json()
