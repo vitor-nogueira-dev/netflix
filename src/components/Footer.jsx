@@ -4,7 +4,6 @@ import './Footer.css';
 
 const redesSociais = {
   linkedin: 'https://www.linkedin.com/in/vitor-noqueira-913a9284/',
-  email: 'vleonel96@gmail.com',
   gitHub: 'https://github.com/vitor-nogueira96',
 };
 

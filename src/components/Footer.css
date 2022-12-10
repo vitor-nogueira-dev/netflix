@@ -1,6 +1,6 @@
 .redesSociais {
   align-items: center;
-  background-color: #DDD;
+  background-color: #141414;
   display: flex;
   justify-content: space-evenly;
   padding: 10px;
@@ -29,15 +29,21 @@
 
 .fonte a {
   text-decoration: none;
-  color: #000;
+  color: #FFF;
 }
 
 .netflix, a {
   text-decoration: none;
-  color: #000;
+  color: #FFF;
   padding-left: 10px;
 }
 
 .netflix > a:hover, .fonte > a:hover {
   color: #D91821;
+}
+
+@media (max-width: 760px) {
+  .netflix, .fonte {
+    font-size: 8px;
+  }
 }

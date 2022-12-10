@@ -1,7 +1,8 @@
 import PropTypes from "prop-types";
 import React from "react";
-import LogoLinkedin from "./imagens/linkedin.png";
-import LogoGitHub from "./imagens/github.png";
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import GitHubIcon from '@mui/icons-material/GitHub';
+import LinkIcon from '@mui/icons-material/Link';
 import "./Footer.css";
 
 class RedesSociais extends React.Component {
@@ -12,33 +13,28 @@ class RedesSociais extends React.Component {
       <section className="section-redesSociais">
         <section className="redesSociais">
           <a href={linkedin} target="_blank" rel="noreferrer">
-            <img src={LogoLinkedin} alt="Logo instagram" />
+            <LinkedInIcon style={{color: 'white'}} />
           </a>
 
           <a href={gitHub} target="_blank" rel="noreferrer">
-            <img src={LogoGitHub} alt="Logo instagram" />
+            <GitHubIcon style={{color: 'white'}} />
           </a>
 
-          <p className="contato">
-            📧
-            {email}
-          </p>
           <p className="fonte">
             <a
               href="https://www.themoviedb.org/"
               target="_blank"
               rel="noreferrer"
-            >
-              🔗Fonte
+            > 🔗 The Moviedb
             </a>
           </p>
           <p className="netflix">
-            Direitos reservados a
+            Todos os direitos reservados a
             <a
               href="https://www.netflix.com/pt-br/"
               target="_blank"
               rel="noreferrer"
-            > 🔗Netflix
+            > 🔗 Netflix
             </a>
           </p>
         </section>
