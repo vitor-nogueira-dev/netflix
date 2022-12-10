@@ -1,5 +1,7 @@
 import React from "react";
 import "./Header.css";
+import NotificationsIcon from '@mui/icons-material/Notifications';
+import SearchIcon from '@mui/icons-material/Search';
 
 const Header = ({ black }) => {
   return (
@@ -21,9 +23,9 @@ const Header = ({ black }) => {
         <div>Navegar por idiomas</div>
       </div>
       <div className="header--navRight">
-        <div>🔍</div>
+        <div><SearchIcon /> </div>
         <div>Infantil</div>
-        <div>Sino</div>
+        <div><NotificationsIcon /></div>
         <div className="header--user">
           <a href="/">
             <img
