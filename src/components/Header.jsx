@@ -18,9 +18,9 @@ const Header = ({ black }) => {
         <div>Início</div>
         <div>Séries</div>
         <div>Filmes</div>
-        <div>Bombando</div>
-        <div>Minha Lista</div>
-        <div>Navegar por idiomas</div>
+        {/* <div className="hidden">Bombando</div>
+        <div className="hidden">Minha Lista</div>
+        <div className="hidden">Navegar por idiomas</div> */}
       </div>
       <div className="header--navRight">
         <div><SearchIcon /> </div>
