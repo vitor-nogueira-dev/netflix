@@ -1,11 +1,10 @@
 import React, { useEffect, useState } from "react";
 import Tmdb from "./Tmdb";
-import MovieRow from "./components/MovieRow";
-
-import "./App.css";
-import FeaturedMovie from "./components/FeaturedMovie";
 import Header from "./components/Header";
+import FeaturedMovie from "./components/FeaturedMovie";
+import MovieRow from "./components/MovieRow";
 import Footer from "./components/Footer";
+import "./App.css";
 
 const App = () => {
   const [movieList, setMovieList] = useState([]);
@@ -18,15 +17,15 @@ const App = () => {
       // pegando a lista total
       const list = await Tmdb.getHomeList();
       setMovieList(list);
-      
+
       // Pegando o featured
       const originals = list.filter((item) => item.slug === "originals");
       const randomChosen = Math.floor(
         Math.random() * (originals[0].items.results.length - 1)
-        );
-        const chosen = originals[0].items.results[randomChosen];
-        const chosenInfo = await Tmdb.getMovieInfo(chosen.id, "tv");
-        
+      );
+      const chosen = originals[0].items.results[randomChosen];
+      const chosenInfo = await Tmdb.getMovieInfo(chosen.id, "tv");
+
       setFeaturedData(chosenInfo);
     };
     loadAll();
@@ -40,16 +39,15 @@ const App = () => {
         setBlackHeader(false);
       }
     };
-    window.addEventListener('scroll', scrollListener);
+    window.addEventListener("scroll", scrollListener);
 
     return () => {
-      window.removeEventListener('scroll', scrollListener);
-    }
-  }, [])
+      window.removeEventListener("scroll", scrollListener);
+    };
+  }, []);
   return (
     <div className="page">
       <Header black={blackHeader} />
-
       {featuredData && <FeaturedMovie item={featuredData} />}
 
       <section className="lists">
@@ -58,12 +56,16 @@ const App = () => {
         ))}
       </section>
       <footer>
-       <Footer />
+        <Footer />
       </footer>
-      {movieList.length <= 0 && 
-      <div className="loading">
-        <img src="https://media.filmelier.com/noticias/br/2020/03/Netflix_LoadTime.gif" alt="carregando" />
-      </div>}
+      {movieList.length <= 0 && (
+        <div className="loading">
+          <img
+            src="https://media.filmelier.com/noticias/br/2020/03/Netflix_LoadTime.gif"
+            alt="carregando"
+          />
+        </div>
+      )}
     </div>
   );
 };

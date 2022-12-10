@@ -21,7 +21,6 @@ header.black {
   font-size: 20px;
   display: flex;
   padding: 15px;
-  border: 2px solid green;
   gap: 10px;
   align-self: center;
   align-items: center;
@@ -36,7 +35,7 @@ div {
   font-size: 70%;
 }
 .header--logo {
-  height: 25px;
+  height: 35px;
 }
 
 .header--logo img{
