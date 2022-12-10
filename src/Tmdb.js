@@ -7,49 +7,75 @@ const API_BASE = 'https://api.themoviedb.org/3';
 // Em alta (top rated)
 // Filmes : Aç˜o, comédia, terror, romance e documentários 
 
-export default {
+const fetchFilmes = async (endpoint) => {
+  const request = await fetch(`${API_BASE}${endpoint}`)
+  const json = await request.json()
+  return json;
+}
+
+const filmesList = {
   getHomeList: async () => {
     return [
       {
-        slug: 'originais',
+        slug: 'originals',
         title: 'Originais da Netflix',
-        items: [],
+        items: await fetchFilmes(`/discover/tv?with_network=213&language=pt-BR&api_key=${API_KEY}`),
       },
       {
         slug: 'trending',
         title: 'Recomendados para Você',
-        items: [],
+        items: await fetchFilmes(`/trending/all/week?language=pt-BR&api_key=${API_KEY}`),
       },
       {
         slug: 'toprated',
         title: 'Em alta',
-        items: [],
+        items: await fetchFilmes(`/movie/top_rated?language=pt-BR&api_key=${API_KEY}`),
       },
       {
         slug: 'action',
         title: 'Ação',
-        items: [],
+        items: await fetchFilmes(`/discover/movie?with_genres=28&language=pt-BR&api_key=${API_KEY}`),
       },
       {
         slug: 'comedy',
         title: 'Comédia',
-        items: [],
+        items: await fetchFilmes(`/discover/movie?with_genres=35&language=pt-BR&api_key=${API_KEY}`),
       },
       {
-        slug: 'terror',
+        slug: 'horror',
         title: 'Terror',
-        items: [],
+        items: await fetchFilmes(`/discover/movie?with_genres=27&language=pt-BR&api_key=${API_KEY}`),
       },
       {
         slug: 'romance',
         title: 'Romance',
-        items: [],
+        items: await fetchFilmes(`/discover/movie?with_genres=10749&language=pt-BR&api_key=${API_KEY}`),
       },
       {
-        slug: 'documentary',
+        slug: 'documentary', 
         title: 'Documentários',
-        items: [],
+        items: await fetchFilmes(`/discover/movie?with_genres=99&language=pt-BR&api_key=${API_KEY}`),
       },
-    ]
+    ];
+  }, 
+  getMovieInfo: async (movieId, type) => {
+    let info = {};
+    if (movieId) {
+        switch(type) {
+          case 'movie':
+            info = await fetchFilmes(`/movie/${movieId}?language=pt-BR&api_key=${API_KEY}`)
+          break;
+          case 'tv':
+            info = await fetchFilmes(`/tv/${movieId}?language=pt-BR&api_key=${API_KEY}`)
+          break;
+          default:
+            info = null;
+            break;
+        }
+
+    }
+    return info;
   }
 }
+
+export default filmesList;
