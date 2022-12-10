@@ -22,8 +22,8 @@ header.black {
   align-self: center;
   cursor: pointer;
   display: flex;
-  font-size: 20px;
-  gap: 10px;
+  font-size: 17px;
+  gap: 13px;
   padding: 15px;
 }
 
