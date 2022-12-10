@@ -10,7 +10,6 @@ const App = () => {
   const [movieList, setMovieList] = useState([]);
   const [featuredData, setFeaturedData] = useState(null);
   const [blackHeader, setBlackHeader] = useState(false);
-  // const [description, setDescription] = useState(false);
 
   useEffect(() => {
     const loadAll = async () => {
@@ -71,7 +70,3 @@ const App = () => {
 };
 
 export default App;
-// Header
-// Destaque
-// Listas
-// Rodapé

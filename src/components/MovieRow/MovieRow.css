@@ -17,15 +17,15 @@
 }
 
 .movieRow--item {
+  cursor: pointer;
   display: inline-block;
   width: 150px;
-  cursor: pointer;
 }
 
 .movieRow--item img {
-  width: 100%;
   transform: scale(0.9);
   transition: all ease 0.2s;
+  width: 100%;
 }
 
 .movieRow--item img:hover {
@@ -34,18 +34,18 @@
 
 .movieRow--left,
 .movieRow--right {
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.6);
+  cursor: pointer;
+  display: flex;
+  height: 225px;
+  justify-content: center;
+  opacity: 0;
+  overflow: hidden;
+  transition: all ease 0.5s;
   position: absolute;
   width: 40px;
-  height: 225px;
-  background-color: rgba(0, 0, 0, 0.6);
   z-index: 99;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
-  cursor: pointer;
-  opacity: 0;
-  transition: all ease 0.5s;
 }
 
 .movieRow--left {

@@ -2,13 +2,12 @@ import PropTypes from "prop-types";
 import React from "react";
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import GitHubIcon from '@mui/icons-material/GitHub';
-import LinkIcon from '@mui/icons-material/Link';
 import "./Footer.css";
 
 class RedesSociais extends React.Component {
   render() {
     const { redesSociais } = this.props;
-    const { linkedin, email, gitHub } = redesSociais;
+    const { linkedin, gitHub } = redesSociais;
     return (
       <section className="section-redesSociais">
         <section className="redesSociais">
@@ -45,11 +44,9 @@ class RedesSociais extends React.Component {
 
 RedesSociais.propTypes = {
   redesSociais: PropTypes.shape({
-    instagram: PropTypes.string,
     linkedin: PropTypes.string,
-    email: PropTypes.string,
     gitHub: PropTypes.string,
-  }).isRequired,
+  }),
 }.isRequired;
 
 export default RedesSociais;

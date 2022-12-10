@@ -2,9 +2,9 @@
   align-items: center;
   background-color: #141414;
   display: flex;
+  font-size: 12px;
   justify-content: space-evenly;
   padding: 10px;
-  font-size: 12px;
 }
 
 .redesSociais > a > img { 
@@ -17,25 +17,25 @@
 }
 
 .section-redesSociais {
-  text-align: center;
   padding-top: 20px;
+  text-align: center;
 }
 
 .contato {
   color: #000;
-  width: 210px;
   margin: 0;
+  width: 210px;
 }
 
 .fonte a {
-  text-decoration: none;
   color: #FFF;
+  text-decoration: none;
 }
 
 .netflix, a {
-  text-decoration: none;
   color: #FFF;
   padding-left: 10px;
+  text-decoration: none;
 }
 
 .netflix > a:hover, .fonte > a:hover {
