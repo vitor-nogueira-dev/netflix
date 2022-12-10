@@ -28,7 +28,7 @@ header.black {
   cursor: pointer;
 }
 
-.header--navLeft:hover, .header--navRight:hover {
+.header--navLeft > a:hover, .header--navRight > a:hover {
   color: #DDD;
 }
 

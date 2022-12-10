@@ -15,17 +15,14 @@ const Header = ({ black }) => {
         </a>
       </div>
       <div className="header--navLeft">
-        <div>Início</div>
-        <div>Séries</div>
-        <div>Filmes</div>
-        {/* <div className="hidden">Bombando</div>
-        <div className="hidden">Minha Lista</div>
-        <div className="hidden">Navegar por idiomas</div> */}
+        <a href="/">Início</a>
+        <a href="/">Séries</a>
+        <a href="/">Filmes</a>
       </div>
       <div className="header--navRight">
-        <div><SearchIcon /> </div>
-        <div>Infantil</div>
-        <div><NotificationsIcon /></div>
+        <a href="/"><SearchIcon /> </a>
+        <a href="/">Infantil</a>
+        <a href="/"><NotificationsIcon /></a>
         <div className="header--user">
           <a href="/">
             <img
