@@ -4,10 +4,11 @@ Acesse aqui 🍿 [Netflix]() ✅
 
 
 ---
-### 💡 Conhecimentos aplicados: 
-- JavaScript
-- React
+### 💡 Conhecimentos aplicados:
+- HTML 
 - CSS
+- React
+- JavaScript
 - API Request
 - Manipulação da biblioteca [Material/ui](https://mui.com/material-ui/)
 ---
