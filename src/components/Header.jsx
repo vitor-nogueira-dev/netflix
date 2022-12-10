@@ -1,6 +1,6 @@
 import React from "react";
 import "./Header.css";
-import NotificationsIcon from '@mui/icons-material/Notifications';
+import NotificationsOutlinedIcon from '@mui/icons-material/NotificationsOutlined';
 import SearchIcon from '@mui/icons-material/Search';
 
 const Header = ({ black }) => {
@@ -22,7 +22,7 @@ const Header = ({ black }) => {
       <div className="header--navRight">
         <a href="/"><SearchIcon /> </a>
         <a href="/">Infantil</a>
-        <a href="/"><NotificationsIcon /></a>
+        <a href="/"><NotificationsOutlinedIcon /></a>
         <div className="header--user">
           <a href="/">
             <img
