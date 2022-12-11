@@ -1,6 +1,6 @@
 ## Projeto Netflix 🍿
 ---
-Acesse aqui 🍿 [Netflix]() ✅
+Acesse aqui 🍿 [Netflix](https://netflix-vn.netlify.app/) ✅
 
 
 ---
